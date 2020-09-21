@@ -1,0 +1,24 @@
+.bounceLoader > div {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background-color: #8385aa;
+  margin: 0 0.3rem;
+  border-radius: 50%;
+  animation: bounce-loader 0.5s infinite alternate;
+}
+
+.bounceLoader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bounceLoader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce-loader {
+  to {
+    opacity: 0.2;
+    transform: translateY(-12px);
+  }
+}
