@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .blackWhiteButton {
   cursor: pointer;
   border: 3px solid black;
@@ -12,4 +18,8 @@
 .blackWhiteButton:hover {
   background: #fff;
   color: #000;
+}
+
+.blackWhiteButton:active {
+  transform: scale(0.96);
 }

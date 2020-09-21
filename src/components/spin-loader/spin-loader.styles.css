@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .spinLoader {
   border: 6px solid #f3f3f3;
   border-top-color: #3498db;

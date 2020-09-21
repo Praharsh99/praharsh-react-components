@@ -1,12 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-import styles from './input.styles.css'
+import styles from './input.styles.css';
 
-const Input = ({ type = 'text', ...otherProps }) => {
+const Input = ({ type, variant, ...otherProps }) => {
+  const variantClassName = variant || 'default';
+
   const inputType =
-    type === 'text' || type === 'password' || type === 'email' ? type : 'text'
+    type === 'text' || type === 'password' || type === 'email' ? type : 'text';
 
-  return <input type={inputType} className={styles.input} {...otherProps} />
-}
+  return (
+    <div className={styles.inputContainer}>
+      <input
+        type={inputType}
+        className={`${styles.input} ${styles['input--' + variantClassName]}`}
+        {...otherProps}
+      />
 
-export default Input
+      <label className={styles.inputLabel}>
+        {otherProps.label || 'Enter Here'}
+      </label>
+    </div>
+  );
+};
+
+export default Input;
